@@ -6,7 +6,7 @@ time_period <- strptime(paste(data$Date, data$Time), format='%d/%m/%Y %H:%M:%S')
 
 png(filename = 'plot3.png' , width = 480, height = 480)
 
-plot(time_period, data$Sub_metering_1, type='l')
+plot(time_period, data$Sub_metering_1, type='l', ylab='Energy sub metering', xlab='')
 lines(time_period, data$Sub_metering_1, col='black')
 lines(time_period, data$Sub_metering_2, col='red')
 lines(time_period, data$Sub_metering_3, col='blue')
