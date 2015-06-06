@@ -1,5 +1,7 @@
 
 source('getadata.R')
+# set locale to force english weekdays
+Sys.setlocale(locale='en_US')
 
 data <- read_power_consumption()
 time_period <- strptime(paste(data$Date, data$Time), format='%d/%m/%Y %H:%M:%S')
